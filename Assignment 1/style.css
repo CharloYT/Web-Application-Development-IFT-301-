@@ -1,0 +1,81 @@
+body {
+    font-family: "Inter", sans-serif;
+    background: #f6f6f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 30px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .payroll-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .payroll-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .payroll-form button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .payroll-form button:hover {
+    background: #333;
+  }
+  
+  .filter {
+    margin: 15px 0;
+  }
+  
+  .filter select, .filter button {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  
+  th, td {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background: #f2f2f2;
+  }
+  
+  .summary {
+    text-align: right;
+    margin-top: 20px;
+    color: #333;
+  }
