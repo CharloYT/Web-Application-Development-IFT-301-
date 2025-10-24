@@ -23,7 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $result->fetch_assoc();
         if (password_verify($password, $user['password'])) {
             $_SESSION['username'] = $user['username'];
-            header("Location: index.php");
+            // Shows the pop-up notification and redirect
+            echo "<script>alert('Login successful!'); window.location.href='index.php';</script>";
             exit();
         } else {
             $error = "Invalid password.";
@@ -40,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="UTF-8">
   <title>Login - Employee Payroll Tracker</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
   <div class="login-container">

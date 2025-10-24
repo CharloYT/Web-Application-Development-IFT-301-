@@ -1,4 +1,9 @@
-<?php include 'db.php'; ?>
+<?php include 'db.php';
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+} ?>
 
 <?php
 // Handle POST (Add Employee)
@@ -42,6 +47,8 @@ $summary = $conn->query("SELECT SUM(salary) AS total_salary, SUM(net_pay) AS tot
     <input type="text" name="role" placeholder="Role" required>
     <input type="number" name="salary" placeholder="Salary (₦)" required>
     <button type="submit">Add Employee</button>
+    <p class="welcome">Welcome, <?= $_SESSION['username']; ?> |
+   <a href="logout.php" class="logout-btn">Logout</a></p>
   </form>
 
   <form method="GET" class="filter">
@@ -61,7 +68,7 @@ $summary = $conn->query("SELECT SUM(salary) AS total_salary, SUM(net_pay) AS tot
   <table>
     <thead>
       <tr>
-        <th>#</th>
+        <th> </th>
         <th>Name</th>
         <th>Role</th>
         <th>Salary</th>
