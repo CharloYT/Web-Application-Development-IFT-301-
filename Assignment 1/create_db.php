@@ -22,6 +22,17 @@ $sql = "CREATE TABLE IF NOT EXISTS employees (
   net_pay DECIMAL(10,2) DEFAULT 0,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";
+
+// Create users table
+$conn->query("CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL
+)");
+
+// Insert a default admin user (username: admin, password: 12345)
+$hashed = password_hash('12345', PASSWORD_DEFAULT);
+$conn->query("INSERT IGNORE INTO users (username, password) VALUES ('admin', '$hashed')");
 $conn->query($sql);
 
 echo "✅ Database and table created successfully!";
