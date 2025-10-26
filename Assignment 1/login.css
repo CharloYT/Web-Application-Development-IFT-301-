@@ -1,69 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: "Inter", sans-serif;
-   }
-   .login-container {
-     width: 400px;
-     margin: 100px auto;
-     background-color: #181818;
-     padding: 30px;
-     border-radius: 12px;
-     text-align: center;
-     box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-   }
-   
-   .login-container h2 {
-     color: #fff;
-     margin-bottom: 25px;
-   }
-   
-   .login-form {
-     display: flex;
-     flex-direction: column;
-     gap: 12px;
-   }
-   
-   .login-form input {
-     padding: 10px 14px;
-     background-color: #222;
-     border: 1px solid #333;
-     border-radius: 8px;
-     color: #fff;
-   }
-   
-   .login-form input::placeholder {
-     color: #aaa;
-   }
-   
-   .login-form button {
-     background-color: #007bff;
-     border: none;
-     color: #fff;
-     padding: 10px;
-     border-radius: 8px;
-     cursor: pointer;
-     font-weight: 500;
-   }
-   
-   .login-form button:hover {
-     background-color: #0056cc;
-   }
-   
-   .error {
-     color: #ff6b6b;
-     font-size: 0.9rem;
-   }
-   
-   .welcome {
-     text-align: right;
-     font-size: 0.9rem;
-     color: #bbb;
-   }
-   
-   .logout-btn {
-     color: #ff6b6b;
-     text-decoration: none;
-   }
-   
-   .logout-btn:hover {
-     text-decoration: underline;
-   }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #091030 0%, #613a88 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-container h2 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login-form input[type="text"]::placeholder,
+.login-form input[type="password"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.login-form button {
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.login-form button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.login-form button:active {
+  transform: translateY(0);
+}
+
+.error {
+  color: #ff6b6b;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.login-container>p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 25px;
+  font-size: 15px;
+}
+
+.login-container>p a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+}
+
+.login-container>p a:hover {
+  border-bottom-color: #ffffff;
+  padding-bottom: 4px;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 30px 25px;
+  }
+
+  .login-container h2 {
+    font-size: 24px;
+  }
+
+  .login-form input[type="text"],
+  .login-form input[type="password"],
+  .login-form button {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+}
