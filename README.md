@@ -24,7 +24,7 @@ The **Employee Payroll Tracker** is a web-based application designed to help org
 ## Technologies Used
 
 - **Frontend:** HTML and CSS,
-- **Backend:** PHP (MySQLi)
+- **Backend:** PHP (MySQL)
 - **Database:** MySQL
 - **Server Environment:** XAMPP & WAMP (Apache, PHP, MySQL)
 - **Version Control:** Git & GitHub
@@ -97,11 +97,11 @@ The **Employee Payroll Tracker** is a web-based application designed to help org
 5.  Open the browser and type in:
 
     ```
-    http://localhost/Group 5/Assignment 1/create_db.php
+    http://localhost/Group-3/Assignment 1/create_db.php
     ```
 
     then type in:
 
     ```
-    http://localhost/Group 5/Assignment 1/login.php
+    http://localhost/Group-3/Assignment 1/login.php
     ```
